@@ -1,0 +1,21 @@
+{{ define "metatitle" }}
+{{- .Site.Title -}}
+{{ end }}
+
+{{ define "recents" }}
+<section>
+    <h2>近期更新</h2>
+    <kb:topic>
+        <h3>内容</h3>
+        <ul>
+        {{ range first 5 (
+            sort (
+                where .Site.Pages "Kind" "in" "page section"
+            ) "Lastmod" "desc"
+        ) }}
+            {{ partial "topiclink/Page.html" . }}
+        {{ end }}
+        </ul>
+    </kb:topic>
+</section>
+{{ end }}

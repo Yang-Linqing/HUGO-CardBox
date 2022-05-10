@@ -1,0 +1,24 @@
+{{- if isset .Params "sections" -}}
+{{- range .Params.Sections -}}
+<section>
+    <h2>{{ .Title }}</h2>
+    {{ range .Groups }}
+    <kb:topic>
+        <h3>{{ .Title }}</h3>
+        <ul>
+        {{ range .Links }}
+            {{ $LinkPartial := print "topiclink/" .Type ".html" }}
+            {{ if eq .Type "Page" }}
+                {{ with $.Page.GetPage .URL }}
+                    {{ partial "topiclink/Page.html" . }}
+                {{ end }}
+            {{ else }}
+                {{ partial $LinkPartial . }}
+            {{ end }}
+        {{ end }}
+        </ul>
+    </kb:topic>
+    {{ end }}
+</section>
+{{- end -}}
+{{- end -}}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="color-scheme" content="dark light">
+        <title>
+            {{- block "metatitle" . -}}
+            {{- .Site.Title -}}
+            {{- end -}}
+        </title>
+        <link rel="apple-touch-icon" href='{{relURL "/apple-touch-icon.png"}}'>
+        <link rel="shortcut icon" href='{{relURL "/icon.png"}}'>
+        <link rel="mask-icon" href='{{relURL "/mask-icon.svg"}}' color="#4682b4">
+        <meta name="description" content="{{ .Description }}">
+        <meta name="author" content="杨林青">
+        <link rel="stylesheet" media="(prefers-color-scheme: light)" href='{{ relURL "/chroma/syntax.css" }}'>
+        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='{{ relURL "/chroma/dracula.css" }}'>
+        <link rel="stylesheet" href='{{ relURL "/style.css" }}'>
+        <script defer src='{{ relURL "/fontawesome/all.min.js" }}'></script>
+    </head>
+    <body>
+        <header>
+            <kb:title>
+                <aside>
+                    {{- if .Params.ContentType -}}
+                    {{- .Params.ContentType -}}
+                    {{- else -}}
+                    卡片
+                    {{- end -}}
+                </aside>
+                <b>
+                    {{- if .Title -}}
+                    {{- .Title -}}
+                    {{- else -}}
+                    无标题页面
+                    {{- end -}}
+                </b>
+            </kb:title>
+        </header>
+        <main>
+            <kb:title>
+                <aside>
+                    {{- if .Params.ContentType -}}
+                    {{- .Params.ContentType -}}
+                    {{- else -}}
+                    页面
+                    {{- end -}}
+                </aside>
+                <h1>
+                    {{- if .Title -}}
+                    {{- .Title -}}
+                    {{- else -}}
+                    无标题页面
+                    {{- end -}}
+                </h1>
+            </kb:title>
+            <kb:description>{{ .Description }}</kb:description>
+            <kb:content>{{ .Content }}</kb:content>
+        </main>
+        <footer>
+        {{ block "recents" . }}{{ end }}
+        {{- partial "sections.html" . -}}
+        {{- partial "footer.html" . -}}
+        {{ block "scripts" . }}{{ end }}
+        <script src='{{"/title.js" | relURL}}'></script>
+        <script src='{{"/mermaid/min.js" | relURL}}'></script>
+        <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'neutral'});</script>
+        {{ if eq .File.Ext "html" }}
+            <script src='{{"/fixTOC.js" | relURL}}'></script>
+        {{ end }}
+            <script src='{{ "/completeTOC.js" | relURL }}'></script>
+        </footer>
+    </body>
+</html>

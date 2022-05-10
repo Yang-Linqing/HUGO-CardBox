@@ -1,0 +1,11 @@
+goldmark:
+  parser:
+    attribute:
+      block: true
+      title: true
+  renderer:
+    hardWraps: true
+tableOfContents:
+  ordered: true
+highlight:
+  noClasses: false
