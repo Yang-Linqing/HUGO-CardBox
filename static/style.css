@@ -1,11 +1,15 @@
 /* 变量表 */
 :root {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
     --page-max-width: 700px;
     --page-padding: 2rem;
     --block-padding: 1em;
     --block-border-radius: 1.5em;
 
     --theme-color: steelblue;
+    --text-color: rgba(0,0,0,0.8);
     --control-background-color: rgba(0, 0, 0, 0.05);
     --footer-color: rgba(0, 0, 0, 0.04);
     --seperator-color: rgba(0, 0, 0, 0.2);
@@ -16,6 +20,7 @@
 @media (prefers-color-scheme: dark) {
 :root {
     --theme-color: skyblue;
+    --text-color: rgba(255,255,255,0.8);
     --control-background-color: rgba(255, 255, 255, 0.1);
     --footer-color: rgba(255, 255, 255, 0.05);
     --seperator-color: rgba(255, 255, 255, 0.2);
@@ -33,7 +38,7 @@ body {
 }
 p {
     margin: 0;
-    line-height: 1.3em;
+    color: var(--text-color);
 }
 a {
     text-decoration: none;
@@ -241,9 +246,12 @@ kb\:content {
 kb\:content>h2 {
     margin-top: 2rem;
 }
+kb\:content>h3 {
+    margin: 0rem;
+}
 kb\:content ul, kb\:content ol {
+    margin: 0;
     padding-left: 2em;
-    line-height: 1.6em;
 }
 
 /*批注设置*/
