@@ -1,6 +1,5 @@
 /* 变量表 */
 :root {
-    font-size: 14px;
     line-height: 1.5;
     color: var(--text-color);
     --page-max-width: 700px;
