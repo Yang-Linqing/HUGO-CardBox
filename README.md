@@ -23,7 +23,13 @@ markup:
 
 ## 创建卡片
 ```bash
-hugo new content/card-id-name.md
+hugo new content/cardid.md
+```
+
+　　本主题提供两种卡片模版：默认卡片和文献卡片。要创建文献卡片，使用一下命令：
+
+```bash
+hugo new content/cardid.md -k ref
 ```
 
 ## 编辑首页索引
