@@ -231,7 +231,7 @@ kb\:description {
     /* grid-column: 1; */
 
     display: block;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* 文章内容 */
@@ -241,10 +241,11 @@ kb\:content {
 
     display: block;
 
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 }
 kb\:content>h2 {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 kb\:content>h3 {
     margin: 0rem;
@@ -298,12 +299,15 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+section h2 {
+    border-bottom: 1px solid var(--seperator-color);
+    margin: 0;
+}
 section>kb\:topic {
     display: flex;
-    border-top: 1px solid var(--seperator-color);
 }
 section>kb\:topic>h3 {
-    width: 10rem;
+    width: 13rem;
     margin: 1rem 0 0 0;
     flex-shrink: 0;
 }
