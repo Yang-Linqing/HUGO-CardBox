@@ -42,6 +42,7 @@ p {
 a {
     text-decoration: none;
     color: gray;
+    overflow-wrap: break-word;
 }
 a[href] {
     color: var(--theme-color);
