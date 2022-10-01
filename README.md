@@ -8,9 +8,11 @@
 　　在 Hugo 站点目录下添加 Git 子模块
 
 ```bash
-git submodule add --depth=1 https://github.com/LinkinYoung/HUGO-CardBox.git themes/CardBox
+git submodule add --depth=1 https://github.com/Yang-Linqing/HUGO-CardBox.git themes/CardBox
 git submodule update --init --recursive
 ```
+
+　　此仓库还同时托管在极狐 GitLab 中，地址：`https://jihulab.com/Yang-Linqing/Hugo-CardBox.git`
 
 　　如果你的站点目录没有使用 Git 管理，直接把此仓库的文件放在 `themes/CardBox` 即可。
 
