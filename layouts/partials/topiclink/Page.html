@@ -2,8 +2,8 @@
     <p>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </p>
-    {{ with .File.ContentBaseName }}
-    <p class="card-id">卡片编号：{{ . }}</p>
-    {{ end }}
     <p>{{ .Description }}</p>
+    {{ with .File.ContentBaseName }}
+    <p><span class="card-attribute">卡片编号：{{ . }}</span></p>
+    {{ end }}
 </li>

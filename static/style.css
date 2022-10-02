@@ -315,9 +315,13 @@ section>kb\:topic>ul>li {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-/* 用于连接图标对齐 */
+/* 用于连接说明缩进 */
 section>kb\:topic>ul>li>p:not(:first-of-type) {
-    padding-left: 2em;
+    margin-left: 2em;
+}
+section>kb\:topic>ul>li .card-attribute {
+    font-size: 0.8em;
+    color: gray;
 }
 /* 链接中的更新时间 */
 section>kb\:topic>ul>li .kb-update-time {
