@@ -5,11 +5,11 @@ date       : {{ .Date }}
 lastmod    : {{ .Date }}
 
 Sections:
-  - Title: 相关内容
+  - Title: 链接区域
     Groups:
-    - Title: 卡片和链接
+    - Title: 索引
       Links:
-      - Type: Page # 这是一个指向首页的卡片链接。
+      - Type: Page
         URL : /
 ---
 文章链接: https://example.com/
@@ -22,5 +22,5 @@ Sections:
 　　正文。
 
 ## 修订记录
-### {{ .Date }}
+{{ .Date }}
 * 创建。

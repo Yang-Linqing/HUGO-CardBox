@@ -15,21 +15,6 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"HugoKB 页面元数据": {
-        "prefix": "metadata",
-        "body": [
-            "---",
-            "title      : ${1:${TM_FILEPATH/.*[\\/](.*)[\\/]_?index[\\.]md|.*[\\/](.*)[\\.]md/$1$2/}}",
-            "description: $2",
-            "date       : $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+0800",
-            "lastmod    : $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+0800",
-            "",
-            "Author     : ${3:linkin}",
-            "---",
-            "$0"
-        ],
-        "description": "创建 HugoKB 页面元数据。"
-    },
     "行内代码": {
         "prefix": ["行内代码", "code-inline", "··"],
         "body": ["`$0`"]
