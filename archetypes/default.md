@@ -1,10 +1,9 @@
 ---
-title      : "{{ replace .Name "-" " " | title }}"
-description: 描述。
+title      : 
+description: 
 date       : {{ .Date }}
 lastmod    : {{ .Date }}
 
-ContentType: 卡片 # 可选值：图书、章节、指南、手册、页面、文章
 Sections:
   - Title: 相关内容
     Groups:
