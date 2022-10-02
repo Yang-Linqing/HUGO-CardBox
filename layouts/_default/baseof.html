@@ -13,20 +13,19 @@
         <link rel="shortcut icon" href='{{relURL "/icon.png"}}'>
         <link rel="mask-icon" href='{{relURL "/mask-icon.svg"}}' color="#4682b4">
         <meta name="description" content="{{ .Description }}">
-        <meta name="author" content="杨林青">
+        <meta name="author" content="{{.Site.Copyright}}">
         <link rel="stylesheet" media="(prefers-color-scheme: light)" href='{{ relURL "/chroma/syntax.css" }}'>
         <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='{{ relURL "/chroma/dracula.css" }}'>
         <link rel="stylesheet" href='{{ relURL "/style.css" }}'>
-        <script defer src='{{ relURL "/fontawesome/all.min.js" }}'></script>
     </head>
     <body>
         <header>
             <kb:title>
                 <aside>
-                    {{- if .Params.ContentType -}}
-                    {{- .Params.ContentType -}}
+                    {{- if .File.ContentBaseName -}}
+                    {{- .File.ContentBaseName -}}
                     {{- else -}}
-                    卡片
+                    索引卡
                     {{- end -}}
                 </aside>
                 <b>
@@ -41,10 +40,10 @@
         <main>
             <kb:title>
                 <aside>
-                    {{- if .Params.ContentType -}}
-                    {{- .Params.ContentType -}}
+                    {{- if .File.ContentBaseName -}}
+                    {{- .File.ContentBaseName -}}
                     {{- else -}}
-                    页面
+                    索引卡
                     {{- end -}}
                 </aside>
                 <h1>

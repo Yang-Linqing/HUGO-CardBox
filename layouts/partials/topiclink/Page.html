@@ -1,19 +1,9 @@
 <li>
     <p>
-        {{- if in (slice "图书" "指南" "手册") .Params.ContentType -}}
-        <i class="fa-solid fa-book content-type"></i>
-        {{- else if eq .Params.ContentType "章节" -}}
-        <i class="far fa-bookmark content-type"></i>
-        {{- else if in (slice "卡片" "页面" "文章") .Params.ContentType -}}
-        <i class="far fa-file-alt content-type"></i>
-        {{- else if in (slice "索引") .Params.ContentType -}}
-        <i class="fa-regular fa-rectangle-list content-type"></i>
-        {{- else if isset .Params "contenttype" -}}
-        <span class="content-type">{{.Params.ContentType}}</span>
-        {{- else -}}
-        <i class="far fa-file-alt content-type"></i>
-        {{- end -}}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </p>
+    {{ with .File.ContentBaseName }}
+    <p class="card-id">卡片编号：{{ . }}</p>
+    {{ end }}
     <p>{{ .Description }}</p>
 </li>

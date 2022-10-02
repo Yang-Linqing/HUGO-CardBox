@@ -317,12 +317,7 @@ section>kb\:topic>ul>li {
 }
 /* 用于连接图标对齐 */
 section>kb\:topic>ul>li>p:not(:first-of-type) {
-    padding-left: 1.5em;
-}
-section>kb\:topic>ul>li>p>.content-type {
-    margin-right: 0.5em;
-    color: gray;
-    min-width: 1em;
+    padding-left: 2em;
 }
 /* 链接中的更新时间 */
 section>kb\:topic>ul>li .kb-update-time {
