@@ -147,6 +147,7 @@ header {
     z-index: 900;
 
     background-color: Canvas;
+    background-color: -apple-system-control-background;
     height: calc(2rem + env(safe-area-inset-top)); 
     width: 100vw;
     line-height: 2rem;
