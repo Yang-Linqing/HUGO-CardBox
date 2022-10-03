@@ -8,13 +8,12 @@
         <ul>
         {{ range .Links }}
             {{ $LinkPartial := print "topiclink/" .Type ".html" }}
-            {{ if eq .Type "Page" }}
-                {{ with $.Page.GetPage .URL }}
-                    {{ partial "topiclink/Page.html" . }}
-                {{ end }}
-            {{ else }}
-                {{ partial $LinkPartial . }}
-            {{ end }}
+            {{ partial $LinkPartial (dict
+                "Title"       .Title
+                "URL"         .URL
+                "Description" .Description
+                "Page"        ($.Page.GetPage .URL)
+            ) }}
         {{ end }}
         </ul>
     </kb:topic>
