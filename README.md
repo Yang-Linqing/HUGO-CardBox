@@ -52,6 +52,7 @@ Sections:
       Links:
         - Type: Page
           URL : card-id-name
+          Description: 替代卡片描述的自定义文本。不设置此值则使用卡片自带描述。
         - Type: URL
           URL : ../example.html
           Title: Examp
