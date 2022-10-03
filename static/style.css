@@ -34,7 +34,9 @@ body {
     padding: 0;
     margin: 0;
     color: CanvasText;
+    color: text;
     background-color: Canvas;
+    background-color: -apple-system-control-background;
 }
 p {
     margin: 0;
