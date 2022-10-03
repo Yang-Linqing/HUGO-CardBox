@@ -3,14 +3,12 @@
     line-height: 1.5;
     scroll-padding-top: 2rem;
 
-    color: var(--text-color);
     --page-max-width: 700px;
     --page-padding: 2rem;
     --block-padding: 1em;
     --block-border-radius: 1.5em;
 
     --theme-color: steelblue;
-    --text-color: rgba(0,0,0,0.8);
     --control-background-color: rgba(0, 0, 0, 0.05);
     --footer-color: rgba(0, 0, 0, 0.04);
     --seperator-color: rgba(0, 0, 0, 0.2);
@@ -21,7 +19,6 @@
 @media (prefers-color-scheme: dark) {
 :root {
     --theme-color: skyblue;
-    --text-color: rgba(255,255,255,0.8);
     --control-background-color: rgba(255, 255, 255, 0.1);
     --footer-color: rgba(255, 255, 255, 0.05);
     --seperator-color: rgba(255, 255, 255, 0.2);
@@ -36,10 +33,11 @@ body {
     font-family: system-ui, sans-serif;
     padding: 0;
     margin: 0;
+    color: CanvasText;
+    background-color: Canvas;
 }
 p {
     margin: 0;
-    color: var(--text-color);
 }
 a {
     text-decoration: none;
@@ -147,7 +145,6 @@ header {
     z-index: 900;
 
     background-color: Canvas;
-    background-color: -apple-system-control-background;
     height: calc(2rem + env(safe-area-inset-top)); 
     width: 100vw;
     line-height: 2rem;
@@ -195,7 +192,7 @@ main {
 }
 /* 标题 */
 kb\:title {
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     display: block;
 }
