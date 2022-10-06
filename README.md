@@ -67,3 +67,6 @@ Sections:
 
 ## VS Code 代码片段
 　　vscode.code-snippets 文件提供了 VS Code 工作区代码片段模版。添加到工作区的 .vscode 目录即可启用。
+
+## 编译
+　　此主题生成的所有链接均相对于网站跟路径，baseURL 必须为 "https://example.org/"，否则卡片之间的链接会失效。

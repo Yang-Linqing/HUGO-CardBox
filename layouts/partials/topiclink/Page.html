@@ -1,6 +1,6 @@
 <li>
     <p>
-        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
     </p>
     <p>{{ .Description | default .Page.Description }}</p>
     {{ with .Page.File }}
