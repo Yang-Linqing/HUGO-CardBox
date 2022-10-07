@@ -51,7 +51,7 @@
         "body": [
             "- Title: $1",
             "  Groups:",
-            "    "
+            "  "
         ],
         "description": "在链接区域插入一节。尽量避免使用节，而是使用组。"
     },
@@ -60,7 +60,7 @@
         "body": [
             "- Title: $1",
             "  Links:",
-            "    "
+            "  "
         ],
         "description": "在链接区域插入一组。"
     },
@@ -68,8 +68,7 @@
         "prefix": ["link-page", "- Type: Page", "page"],
         "body": [
             "- Type: Page",
-            "  URL : $1",
-            ""
+            "  URL : $1"
         ]
     },
     "HugoKB 主题链接":{
@@ -79,8 +78,7 @@
             "  URL        : $1",
             "  Title      : $2",
             "  Description: $3",
-            "  ContentType: ${4|链接,附件,终结点|}",
-            ""
+            "  ContentType: ${4|链接,附件,终结点|}"
         ]
     },
 }
