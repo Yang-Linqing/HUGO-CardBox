@@ -277,6 +277,19 @@ aside.note::before {
     font-weight: bold;
 }
 
+/* 引用快 */
+blockquote {
+    margin: 1em 2em;
+}
+
+/* 定义 */
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-left: 2em;
+}
+
 /* 底部导航 */
 footer {
     background-color: var(--footer-color);
