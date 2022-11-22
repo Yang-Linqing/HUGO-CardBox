@@ -2,7 +2,11 @@
 title      : 
 description: 
 date       : {{ .Date }}
-lastmod    : {{ .Date }}
+RevisionHistory:
+- Date: &ModDate {{ .Date }}
+  Mods:
+  - 创建。
+lastmod: *ModDate
 
 Sections:
   - Title: 链接区域

@@ -65,20 +65,27 @@
         "description": "在链接区域插入一组。"
     },
     "HugoKB 主题链接-页面": {
-        "prefix": ["link-page", "- Type: Page", "page"],
+        "prefix": ["page", "card"],
         "body": [
             "- Type: Page",
             "  URL : $1"
         ]
     },
     "HugoKB 主题链接":{
-        "prefix": ["url", "link-url", "- Type: URL"],
+        "prefix": ["url"],
         "body": [
             "- Type       : URL",
             "  URL        : $1",
             "  Title      : $2",
             "  Description: $3",
-            "  ContentType: ${4|链接,附件,终结点|}"
+        ]
+    },
+    "HugoKB 修订记录":{
+        "prefix": ["mod"],
+        "body": [
+            "- Date: &ModDate $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+0800",
+            "  Mods:",
+            "  - ",
         ]
     },
 }
