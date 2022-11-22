@@ -314,7 +314,7 @@ section>kb\:topic {
     display: flex;
 }
 section>kb\:topic>h3 {
-    width: 13rem;
+    width: 10rem;
     margin: 1rem 0 0 0;
     flex-shrink: 0;
 }
@@ -353,6 +353,26 @@ footer>section.info {
     color: gray;
 }
 
+.revision-history h2 {
+    font-size: 1rem;
+    color: gray;
+}
+.revision-history h3 {
+    margin: 0;
+    width: 15rem;
+
+    font-size: 1rem;
+    font-weight: normal;
+    color: gray;
+}
+.revision-history ul {
+    list-style-type: disc;
+    color: gray;
+}
+.revision-history li {
+    margin: 0 0 0 1.5em;
+}
+
 /* 手机样式 */
 @media screen and (max-width: 600px) {
     :root {
@@ -363,5 +383,9 @@ footer>section.info {
     }
     section>kb\:topic {
         flex-direction: column;
+    }
+    section>kb\:topic>h3 {
+        width: 100%;
+        font-size: 1rem;
     }
 }

@@ -1,0 +1,16 @@
+{{- with .Params.RevisionHistory -}}
+<section class="revision-history">
+    <h2>修订记录</h2>
+    {{ range . }}
+    <kb:topic>
+        <h3>{{ .Date }}</h3>
+        <ul>
+            {{- range .Mods -}}
+            <li>{{.}}</li>
+            {{- end -}}
+        </ul>
+    </kb:topic>
+    {{ end }}
+</section>
+{{- end -}}
+

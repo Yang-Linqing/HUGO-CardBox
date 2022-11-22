@@ -60,6 +60,7 @@
         <footer>
         {{ block "recents" . }}{{ end }}
         {{- partial "sections.html" . -}}
+        {{- partial "revision-history.html" . -}}
         {{- partial "footer.html" . -}}
         {{ block "scripts" . }}{{ end }}
         <script src='{{"/title.js" | relURL}}'></script>
