@@ -357,8 +357,11 @@ footer>section.info {
     font-size: 1rem;
     color: gray;
 }
+.revision-history kb\:topic {
+    margin: 0.5rem 0;
+}
 .revision-history h3 {
-    margin: 1rem 0;
+    margin: 0;
     width: 15rem;
 
     font-size: 1rem;
@@ -370,10 +373,7 @@ footer>section.info {
     color: gray;
 }
 .revision-history li {
-    margin: 0;
-}
-.revision-history li:first-child {
-    margin-top: 1rem;
+    margin: 0 0 0 1.5em;
 }
 
 /* 手机样式 */
@@ -389,15 +389,5 @@ footer>section.info {
     }
     section>kb\:topic>h3 {
         width: 100%;
-    }
-    .revision-history h3 {
-        margin: 0;
-        font-size: 1rem;
-    }
-    .revision-history li {
-        margin: 0 0 0 1.5em;
-    }
-    .revision-history li:first-child {
-        margin-top: 0;
     }
 }
