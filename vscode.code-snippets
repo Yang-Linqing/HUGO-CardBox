@@ -68,7 +68,7 @@
         "prefix": ["page", "card"],
         "body": [
             "- Type: Page",
-            "  URL : $1"
+            "  URL : "
         ]
     },
     "HugoKB 主题链接":{
@@ -77,7 +77,7 @@
             "- Type       : URL",
             "  URL        : $1",
             "  Title      : $2",
-            "  Description: $3",
+            "  Description: ",
         ]
     },
     "HugoKB 修订记录":{
