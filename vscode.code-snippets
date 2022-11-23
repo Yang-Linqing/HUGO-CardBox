@@ -33,7 +33,7 @@
     "批注": {
         "prefix": "aside",
         "body": [
-            "{{<aside ${1|note,tip|}>}}",
+            "{{<aside ${1|note,tip,warning|}>}}",
             "$0",
             "{{</aside>}}"
         ]

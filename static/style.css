@@ -276,6 +276,15 @@ aside.note::before {
     color: gray;
     font-weight: bold;
 }
+aside.warning {
+    border: solid 1px red;
+    background-color: rgba(255, 0, 0, 0.104);
+}
+aside.warning::before {
+    content: "警告";
+    color: red;
+    font-weight: bold;
+}
 
 /* 引用快 */
 blockquote {
