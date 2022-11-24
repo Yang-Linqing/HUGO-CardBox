@@ -1,9 +1,15 @@
+{{- if .Page -}}
 <li>
     <p>
         <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
     </p>
     <p>{{ .Description | default .Page.Description }}</p>
+    {{ if .Page.Draft }}
+    <p><span class="card-attribute">未公开</span></p>
+    {{ end }}
+    <p><span class="card-attribute">更新时间：{{- .Page.Lastmod -}}</span></p>
     {{ with .Page.File }}
     <p><span class="card-attribute">卡片编号：{{ .ContentBaseName }}</span></p>
     {{ end }}
 </li>
+{{- end -}}
