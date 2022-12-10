@@ -17,6 +17,14 @@
         <link rel="stylesheet" media="(prefers-color-scheme: light)" href='{{ relURL "/chroma/syntax.css" }}'>
         <link rel="stylesheet" media="(prefers-color-scheme: dark)" href='{{ relURL "/chroma/dracula.css" }}'>
         <link rel="stylesheet" href='{{ relURL "/style.css" }}'>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script src="{{"/mathjax/tex-chtml.js" | relURL}}" id="MathJax-script" async></script>
     </head>
     <body>
         <header>
