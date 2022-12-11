@@ -62,7 +62,12 @@
                     {{- end -}}
                 </h1>
             </kb:title>
-            <kb:description>{{ .Description }}</kb:description>
+            <kb:description>
+                {{- .Description -}}
+                {{- if .Page.Draft -}}
+                <p><span class="card-attribute">未公开</span></p>
+                {{- end -}}
+            </kb:description>
             <kb:content>{{ .Content }}</kb:content>
         </main>
         <footer>

@@ -227,6 +227,14 @@ kb\:description {
     display: block;
     margin-bottom: 1rem;
 }
+kb\:description .card-attribute {
+    font-size: 0.8em;
+    color: white;
+    background-color: gray;
+    border-radius: 0.3em;
+
+    padding: 0.1em 0.2em;
+}
 
 /* 文章内容 */
 kb\:content {
