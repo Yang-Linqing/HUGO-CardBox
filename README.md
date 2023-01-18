@@ -34,36 +34,87 @@ hugo new content/cardid.md
 hugo new content/cardid.md -k ref
 ```
 
+> ⚠️注意: 文件名将作为卡片编号显示在卡片页面顶部和卡片链接旁边。卡片标题请使用 `Title` 元数据。
+
 ## 编辑首页索引
-　　在 `content/_index.md` 的元数据中可以编辑索引。此文件也是一个卡片，只不过其类型被标记为“首页”。以下是一个示例：
+　　在 `content/_index.md` 的元数据中可以编辑索引。此文件也是一个卡片。以下是一个示例：
 
 ```markdown
 ---
 title      : 卡片盒
 description: 使用 HUGO 构建的卡片盒。
 date       : 2022-05-09T21:17:15+08:00
-lastmod    : 2022-05-09T21:17:22+08:00
+RevisionHistory:
+- Date: &ModDate 2022-05-09T21:17:15+08:00
+  Mods:
+  - 创建。
+lastmod: *ModDate
 
-ContentType: 首页
 Sections:
   - Title: 索引
     Groups:
     - Title: 其他文档
       Links:
+        - card-id
         - Type: Page
-          URL : card-id-name
+          URL : card-id
           Description: 替代卡片描述的自定义文本。不设置此值则使用卡片自带描述。
         - Type: URL
           URL : ../example.html
-          Title: Examp
+          Title: Example
           Description: Example URL.
 ---
  　　这里可以写首页的其他内容。注意行首有两个全角空格。
 ```
 
 ## 添加卡片链接
-　　卡片的元数据中有一个 `Sections` 数组，这里可以创建很多节。一般情况下只使用一个“相关内容”节就足够使用了，也可以自定义节标题，例如“索引”、“最近更新”等。每一节下面包含多个组，每个组下面包含多个链接。`Page` 类型的链接会自动填写卡片标题、编译后的 URL 和描述， `URL` 需要指定标题、URL、描述。如果想要覆盖卡片的标题盒描述，可以使用 `URL` 类型的链接，此时需要填写编译后的 URL。
- 　首页会包含最近 5 个更新的卡片的链接。根据卡片元数据中的 `lastmod` 确定。
+　　卡片的元数据中有一个 `Sections` 数组，这里可以创建很多节。一般情况下只使用一个“相关内容”节就足够使用了，也可以自定义节标题，例如“索引”、“最近更新”等。每一节下面包含多个组，每个组下面包含多个链接，例如：
+
+```yaml
+Sections:
+- Title: 相关内容
+  Groups:
+  - Title: 主题一
+    Links:
+    - 卡片编号一
+    - 卡片编号二
+  - Title: 主题二
+    Links:
+    - 卡片编号三
+    - 卡片编号四
+    - 卡片编号五
+  - Title: 索引
+    Links:
+    - 索引卡片编号一
+    - 索引卡片编号二
+```
+
+　　每个链接会自动填充卡片的元数据。
+
+　　要覆盖卡片的描述，请参考以下示例：
+
+```yaml
+...
+Links:
+- Type: Page
+  URL: 卡片编号
+  Description: 覆盖卡片的描述文本。
+...
+```
+
+　　要插入任意 URL ，请参考以下示例：
+
+```yaml
+...
+Links:
+- Type: URL
+  URL: https://example.com
+  Title: 链接标题
+  Description: 链接描述文本。
+...
+```
+
+　　首页会包含最近 5 个更新的卡片的链接。根据卡片元数据中的 `lastmod` 确定。
 
 ## VS Code 代码片段
 　　vscode.code-snippets 文件提供了 VS Code 工作区代码片段模版。添加到工作区的 .vscode 目录即可启用。
