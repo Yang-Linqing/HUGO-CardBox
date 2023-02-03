@@ -7,6 +7,7 @@ RevisionHistory:
   Mods:
   - 创建。
 lastmod: *ModDate
+draft: true
 
 Sections:
   - Title: 链接区域
