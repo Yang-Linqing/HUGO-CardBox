@@ -1,10 +1,10 @@
 goldmark:
+  extensions:
+    CJK: true
   parser:
     attribute:
       block: true
       title: true
-  renderer:
-    hardWraps: true
 tableOfContents:
   ordered: true
 highlight:
